@@ -1,0 +1,168 @@
+
+@use "./styles/project.scss" as *;
+@use "ungic-sass-theme" as *;
+
+
+
+body {
+/*   background: color(primary); */
+  font-family: prop("font-family");
+  text-decoration: none;
+} 
+
+//reset 
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main{
+  display: block;
+}
+
+body{
+  line-height: 1;
+}
+
+ol, ul{
+  list-style: none;
+}
+
+blockquote, q{
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+  content: '';
+  content: none;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input{
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+button, a, input {
+  cursor: pointer;
+}
+// container 
+.container {
+  max-width: 1510px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  font-family: 'IBM Plex Sans Hebrew', sans-serif;
+}
+
+//style
+b {
+  font-weight: 700;
+}
+.title {
+  color: #272D4E;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -0.55px;
+  text-align: center;
+}
+
+
+
+//icomoon 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./fonts/icomoon.eot?gmf42q');
+  src:  url('./fonts/icomoon.eot?gmf42q#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?gmf42q') format('truetype'),
+    url('./fonts/icomoon.woff?gmf42q') format('woff'),
+    url('./fonts/icomoon.svg?gmf42q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-accessbility:before {
+  content: "\e900";
+}
+.icon-arrow-next:before {
+  content: "\e901";
+}
+.icon-arrow-prev:before {
+  content: "\e902";
+}
+.icon-call:before {
+  content: "\e903";
+}
+.icon-facebook:before {
+  content: "\e904";
+}
+.icon-linkedin:before {
+  content: "\e905";
+}
+.icon-mail:before {
+  content: "\e906";
+}
+.icon-vector:before {
+  content: "\e907";
+}
+
+
+
+//animation 
+.products-wrap , .products-container , .products-frame, .header-content, .main-schedule , .main-title , .main-subtitile , .main-image, .main-wrapper , .main-tools-container, .services-card, .title, .button, .advantages-container,  .advantages-image, .development-card, .title, .development-btn, .development-mbtn, .development-container, .cta , .cta-subtitle, .cta-form, .cta-form-group , .cta-content-after, .cta-content-before, .outrun-container, .outrun-image, .solution-container , .solution-image, .solution-tools-container, .support-subtitle, .support-container, .news-content, .footer-top-column , .footer-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media(max-width:992px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media(max-width:520px) {
+  .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+

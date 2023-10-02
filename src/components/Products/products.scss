@@ -1,0 +1,229 @@
+
+.products {
+  margin: 100px 0;
+  background: color(background-color);
+  &-content {
+    padding-top: 50px;
+    display: flex;
+  }
+  &-column {
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+  &-container {
+    z-index: 1;
+    &:nth-child(3) {
+       
+      display: flex;
+      justify-content: space-between;
+    }
+    &-title {
+      color: color(primary);
+      font-size: 44px;
+      font-weight: 600;
+      line-height: 33px;
+      letter-spacing: -0.44px;
+    }
+    &-image {
+      border-radius: 20px;
+      min-width: 132px;
+      min-height: 132px;
+      background: color(background-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-text {
+      max-width: 640px;
+      color: color(primary);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+    &-button {
+      margin-top: 30px;
+    }
+  }
+  &-wrap {
+    border-radius: 20px;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+    &-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8); 
+        z-index: 0; 
+      
+    }
+  }
+  &-frame {
+    min-width: 730px;
+    padding: 20px;
+    min-height: 275px;
+    border-radius: 18px;
+    background: color(primary);
+    position: relative;
+    &::after {
+      content: "";
+      background: url("./images/1.svg") no-repeat;
+      background-size: contain;
+      width: 300px;
+      height: 140px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    &-numbers {
+      color: color(text-color);
+      font-size: 31.273px;
+      font-weight: 600;
+      line-height: 35.833px;
+      letter-spacing: -0.313px;
+      text-transform: uppercase;
+    }
+    &-text {
+      color: color(extra);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20.848px;
+    }
+    &-title {
+      color: color(text-color);
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 33px;
+      letter-spacing: -0.28px;
+      padding-top: 25px;
+    }
+    &-description {
+      color: color(extra);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      max-width: 330px;
+      margin-top: 10px;
+    }
+    &-procent {
+      right: 20px;
+      top: 160px;
+      color: color(info);
+      font-size: 74px;
+      font-weight: 600;
+      line-height: 35.833px;
+      letter-spacing: -0.74px;
+      text-transform: uppercase;
+      position: absolute;
+    }
+    &-progress {
+      margin-top: 25px;
+      min-height: 30px;
+      width: 100%;
+      background: color(background-color);
+      background: linear-gradient(90deg, color(background-color) 50%, color(info) 50%);
+      border-radius: 18px;
+    }
+    &:nth-child(2) {
+      margin-top: 20px;
+      .products-frame-procent {
+        color: color(danger, 0.2);
+      }
+      .products-frame-progress {
+        background: color(danger, 0.2);
+        background: linear-gradient(90deg, color(danger, 0.2) 90%, color(background-color) 90%);
+      }
+      &::after {
+        content: "";
+        background: url("./images/2.svg");
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
+@media (max-width: 1480px) {
+  .products {
+    &-frame {
+      min-width: 640px;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .products {
+    &-content {
+      flex-direction: column;
+    }
+    &-column {
+      margin-top: 20px;
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .products {
+    margin: 60px 0;
+    &-frame {
+      min-width: 320px;
+      &-procent {
+        font-size: 50px;
+        top: 175px;
+      }
+    }
+  }
+}
+@media (max-width: 520px) {
+  .products {
+    &-wrap {
+      padding: 20px;
+    }
+    &-container {
+      &-title {
+        font-size: 32px;
+      }
+      &-image {
+        min-width: 90px;
+        min-height: 90px;
+      }
+    }
+    &-frame {
+      &-progress {
+        margin-top: 10px;
+      }
+      &-procent {
+        top: 230px;
+      }
+      &:after {
+        background-size: cover !important;
+        width: 170px;
+        height: 100px;
+      }
+      &-description {
+        max-width: 240px;
+      }
+    }
+  }
+}

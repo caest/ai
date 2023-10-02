@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 300px;
+  min-height: 70px;
+  text-decoration: none;
+  color: color(background-color);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: color(info);
+  border-radius: 60px;
+  position: relative;
+  padding: 0 10px;
+  transition: all .2s;
+  span {
+    padding: 0 65px 0 20px;
+  }
+  img {
+    position: absolute;
+    right: 10px;
+  }
+  &:hover {
+    transition: all .2s;
+    background: color(info, 0.1);
+    filter: drop-shadow(0px 18px 44px color(text-color, 0.3));
+  }
+}
